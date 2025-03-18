@@ -1,5 +1,4 @@
 
 
-WELCOME TO DEVOPS WORLD , AT MIND CIRCUIT WE DO NOT JUST TRAIN , WE BUILD , COACH & MENTOR ! 
-
-this is tomcat
+hello every one ...
+this is my first cicd project
