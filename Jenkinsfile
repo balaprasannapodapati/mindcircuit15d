@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -6,7 +5,6 @@ pipeline {
         stage('clone the GitHub code') {
             steps {
                 echo 'IN THIS STAGE CODE WILL CLONE'
-              
                 git branch: 'main', url: 'https://github.com/balaprasannapodapati/mindcircuit15d.git'
             }
            }
@@ -20,9 +18,9 @@ pipeline {
  stage('DEPLOYN THE ARTICAT') {
             steps {
                 echo 'THIS IS DEPLOY STAGE'
+        
 
-  eploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://ec2-54-234-241-252.compute-1.amazonaws.com:8081')], contextPath: 'pipeline', war: '**/*.war'         
-            
+         deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://ec2-54-234-22-55.compute-1.amazonaws.com:8081/')], contextPath: 'pipeline', war: '**/*.war'
             }
         
          }
